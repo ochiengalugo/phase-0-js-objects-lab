@@ -1,4 +1,5 @@
 //Write your code here
+// Task 2: Declare and Initialize an Attendee Object
 let attendee = {
   attendeeId: "T001",
   name: "Alice Smith",
@@ -6,6 +7,7 @@ let attendee = {
   ticketType: "VIP",
   ticketPrice: 150.00
 };
+
 // Task 3: Log Attendee Name
 function logAttendeeName(attendee) {
   console.log(attendee.name);
@@ -22,9 +24,7 @@ function updateTicketType(attendee, newTicketType) {
 }
 
 // Task 6: Update Ticket Price
-// Note: The lab instructions in image 1001269273 ask for a 
-// new 'ticket type' parameter but to update the 'ticketPrice'.
-// I've named the parameter 'newPrice' for clarity.
+// Note: We use 'newPrice' to update the 'ticketPrice' property
 function updateTicketPrice(attendee, newPrice) {
   attendee.ticketPrice = newPrice;
 }
@@ -39,10 +39,15 @@ function addCheckedInProperty(attendee) {
   attendee.checkedIn = true;
 }
 
-logAttendeeName(attendee);
-updateTicketType(attendee, "Regular");
+// Testing Section
+logAttendeeName(attendee);   
+logTicketPrice(attendee);            
+updateTicketType(attendee, "Regular"); 
+updateTicketPrice(attendee, 100.00); 
+removeEventProperty(attendee);
 addCheckedInProperty(attendee);
-console.log(attendee);
+
+console.log(attendee); 
 
 
 
