@@ -39,23 +39,22 @@ function addCheckedInProperty(attendee) {
   attendee.checkedIn = true;
 }
 
-logAttendeeName(attendee); // Should log "Alice Smith"
+logAttendeeName(attendee);
 updateTicketType(attendee, "Regular");
 addCheckedInProperty(attendee);
-console.log(attendee); // Check the updated object
-
+console.log(attendee);
 
 
 
 
 
 //Needed for the tests to work. Don't modify
-// module.exports = {
-//   ...(typeof attendee !== 'undefined' && { attendee }),
-//   ...(typeof logAttendeeName !== 'undefined' && { logAttendeeName }),
-//   ...(typeof logTicketPrice !== 'undefined' && { logTicketPrice }),
-//   ...(typeof updateTicketType !== 'undefined' && { updateTicketType }),
-//   ...(typeof updateTicketPrice !== 'undefined' && { updateTicketPrice }),
-//   ...(typeof removeEventProperty !== 'undefined' && { removeEventProperty }),
-//   ...(typeof addCheckedInProperty !== 'undefined' && { addCheckedInProperty })
-// };
+module.exports = {
+  ...(typeof attendee !== 'undefined' && { attendee }),
+  ...(typeof logAttendeeName !== 'undefined' && { logAttendeeName }),
+  ...(typeof logTicketPrice !== 'undefined' && { logTicketPrice }),
+  ...(typeof updateTicketType !== 'undefined' && { updateTicketType }),
+  ...(typeof updateTicketPrice !== 'undefined' && { updateTicketPrice }),
+  ...(typeof removeEventProperty !== 'undefined' && { removeEventProperty }),
+  ...(typeof addCheckedInProperty !== 'undefined' && { addCheckedInProperty })
+};
